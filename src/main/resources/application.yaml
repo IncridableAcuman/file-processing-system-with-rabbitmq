@@ -1,11 +1,23 @@
+server:
+  port: ${PORT}
+
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
   rabbitmq:
     host: localhost
     port: 5672
     stream:
-      username: myUser
-      password: myPass
-
-file:
-  upload:
-    dir: ${}
+      username: ${BROKER_USER}
+      password: ${BROKER_PASS}
