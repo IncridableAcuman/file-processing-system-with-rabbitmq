@@ -5,7 +5,7 @@ import com.code.file_server.enums.Status;
 import java.time.LocalDateTime;
 
 public record FileResponse(
-        String id,
+        Long id,
         String filename,
         String filePath,
         Status status,
