@@ -9,6 +9,6 @@ public record FileResponse(
         String filename,
         String filePath,
         Status status,
-        LocalDateTime time
+        LocalDateTime createdAt
 ) {
 }

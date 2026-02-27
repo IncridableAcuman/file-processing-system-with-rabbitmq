@@ -10,10 +10,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
     properties:
       hibernate:
-        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
 
   rabbitmq:
     host: localhost
@@ -21,3 +21,6 @@ spring:
     stream:
       username: ${BROKER_USER}
       password: ${BROKER_PASS}
+file:
+  upload:
+    dir: ${UPLOAD_DIR}
